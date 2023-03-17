@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .number{
+        display: grid;
+        place-items: center;
+        margin-top: 240px;
+    }
+    .number > input{
+        width: 240px;
+        border-color: blue;
+        padding: 12px;
+        margin: 8px;
+        border-radius: 4px;
+    }
+    #btn{
+        margin-left: 600px;
+
+    }
+    #result{
+        margin-left: 600px;
+        font-size: 30px;
+        color: red;
+        padding-top: 5px;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="number"><input type="number" placeholder="please input a number" required id="inp"/></div>
+    </div>
+    <button id="btn" onclick="mark()">SUBMIT</button>
+    <div id="result"></div>
+    <script>
+      
+
+        function mark(marks){
+            var marks = document.getElementById("inp").value
+
+            console.log(marks)
+
+            if(marks>79){
+                //return "A"
+                console.log("A")
+                document.getElementById("result").innerHTML = "A"
+            }
+            if(marks>=60 && marks<79){
+                //return "B"
+                console.log("B")
+                document.getElementById("result").innerHTML = "B"
+            }
+            if(marks>=49 && marks<59){
+                //return "C"
+                console.log("C")
+                document.getElementById("result").innerHTML = "C"
+            }
+            if(marks>=40 && marks<49){
+                //return "D"
+                console.log("D")
+                document.getElementById("result").innerHTML = "D"
+            }
+            if(marks<40){
+                //return "E"
+                console.log("E")
+                document.getElementById("result").innerHTML = "E"
+            }
+}
+    </script>
+    
+</body>
+</html>
